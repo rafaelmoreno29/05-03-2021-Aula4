@@ -27,19 +27,91 @@ public class Apolice {
         this.valorAutomovel = valorAutomovel;
     }
     public double calcularValor(){        
-        if(sexo == 'M' && idade <= 25)
-            return valorAutomovel * 10/100;
-        else if(sexo == 'M' && idade > 25)
-            return valorAutomovel * 5/100;
+        if(getSexo() == 'M' && getIdade() <= 25)
+            return getValorAutomovel() * 10/100;
+        else if(getSexo() == 'M' && getIdade() > 25)
+            return getValorAutomovel() * 5/100;
         else
-            return valorAutomovel * 2/100;
+            return getValorAutomovel() * 2/100;
     }
     public String imprimir(){
-        return "Número: " + numero +"\n"
-                + "Nome: " + nome + "\n"
-                + "Idade: " + idade + "\n"
-                + "Sexo: " + sexo + "\n"
-                + "Valor Auto.: " + valorAutomovel + "\n"
+        return "Número: " + getNumero() +"\n"
+                + "Nome: " + getNome() + "\n"
+                + "Idade: " + getIdade() + "\n"
+                + "Sexo: " + getSexo() + "\n"
+                + "Valor Auto.: " + getValorAutomovel() + "\n"
                 + "Valor Apólice: " + calcularValor();
     }
+
+    /**
+     * @return the numero
+     */
+    public int getNumero() {
+        return numero;
+    }
+
+    /**
+     * @param numero the numero to set
+     */
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    /**
+     * @return the nome
+     */
+    public String getNome() {
+        return nome;
+    }
+
+    /**
+     * @param nome the nome to set
+     */
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    /**
+     * @return the idade
+     */
+    public int getIdade() {
+        return idade;
+    }
+
+    /**
+     * @param idade the idade to set
+     */
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    /**
+     * @return the sexo
+     */
+    public char getSexo() {
+        return sexo;
+    }
+
+    /**
+     * @param sexo the sexo to set
+     */
+    public void setSexo(char sexo) {
+        this.sexo = sexo;
+    }
+
+    /**
+     * @return the valorAutomovel
+     */
+    public double getValorAutomovel() {
+        return valorAutomovel;
+    }
+
+    /**
+     * @param valorAutomovel the valorAutomovel to set
+     */
+    public void setValorAutomovel(double valorAutomovel) {
+        this.valorAutomovel = valorAutomovel;
+    }
+    
+    
 }
